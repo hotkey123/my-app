@@ -1,9 +1,12 @@
 pipeline{
     agent any
+    environment{
+        MVN_HOME = "/softwares/maven3"
+    }
     stages{
-        stage ("SCM checkout"){
+        stage ("Maven Build"){
             steps{
-                git branch: 'Develop', credentialsId: 'git-creds', url: 'https://github.com/hotkey123/my-app.git'
+                sh "${MVN_HOME} clean package"
             }
         }
     }
