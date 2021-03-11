@@ -9,7 +9,7 @@ pipeline{
     stages{
         stage ("Maven Build"){
             steps{
-                def branch = env.BRANCH_NAME
+                def branch = "${BRANCH_NAME}"
                 sh "echo ${branch}"
                 sh "${MVN_HOME} clean package"
                 sh "mv target/*.war target/${currentBuild.displayName}.war"
