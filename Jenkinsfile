@@ -1,7 +1,7 @@
 pipeline{
     agent any
     environment{
-        MVN_HOME = "/softwares/maven3"
+        MVN_HOME = "/softwares/maven3/bin/mvn"
     }
     stages{
         stage ("Maven Build"){
