@@ -10,6 +10,7 @@ pipeline{
             steps{
                 sh "${MVN_HOME} clean package"
                 sh "mv target/*.war target/${currentBuild.displayName}.war"
+                sh "echo ${env.BRANCH_NAME}
             }
         }
     }
