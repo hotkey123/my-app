@@ -8,7 +8,7 @@ pipeline{
         stage ("Maven Build"){
             steps{
                 sh "${MVN_HOME} clean package"
-                sh "mv target/*.war target/${currentBuild.dispalyname}.war
+                sh "mv target/*.war target/${currentBuild.dispalyname}.war"
             }
         }
     }
