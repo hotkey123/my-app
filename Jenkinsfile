@@ -10,7 +10,7 @@ pipeline{
         stage ("Maven Build"){
             steps{
                 //def branch = "${BRANCH_NAME}"
-                sh "$BRANCH_NAME"
+                sh "echo $BRANCH_NAME"
                 sh "${MVN_HOME} clean package"
                 sh "mv target/*.war target/${currentBuild.displayName}.war"
                 //sh "echo ${env.BRANCH_NAME}"
