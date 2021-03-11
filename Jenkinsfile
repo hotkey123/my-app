@@ -1,4 +1,4 @@
-currentBuild.displayName="Jenkins_20.1.0-"+currentBuild.number
+currentBuild.displayName="Jenkins_20.1.0."+currentBuild.number
 pipeline{
     agent any
     environment{
