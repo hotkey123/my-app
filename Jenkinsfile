@@ -1,4 +1,4 @@
-currentBuild.displayName="Jenkins_declarative-#"+currentBuild.number
+currentBuild.displayName="Jenkins_declarative-"+currentBuild.number
 pipeline{
     agent any
     environment{
